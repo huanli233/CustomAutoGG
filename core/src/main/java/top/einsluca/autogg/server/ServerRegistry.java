@@ -14,6 +14,8 @@ public class ServerRegistry {
         this.servers.add(new CytooxienConfiguration());
         this.servers.add(new AntiACConfiguration());
         this.servers.add(new MCCIslandConfiguration());
+        this.servers.add(new MyPvPConfiguration());
+        this.servers.add(new StayMCConfiguration());
     }
 
     public List<ServerConfiguration> getServers() {
