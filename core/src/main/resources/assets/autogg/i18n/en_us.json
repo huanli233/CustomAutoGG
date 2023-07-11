@@ -1,0 +1,18 @@
+{
+  "autogg": {
+    "settings": {
+      "name": "AutoGG",
+      "enabled": {
+        "name": "Enabled"
+      },
+      "delay": {
+        "name": "Delay",
+        "description": "The delay between the game ending and the message being sent."
+      },
+      "message": {
+        "name": "Message",
+        "description": "The message to send when the game ends."
+      }
+    }
+  }
+}

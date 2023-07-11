@@ -1,0 +1,18 @@
+{
+  "autogg": {
+    "settings": {
+      "name": "AutoGG",
+      "enabled": {
+        "name": "Aktiviert"
+      },
+      "delay": {
+        "name": "Verzögerung",
+        "description": "Die Verzögerung zwischen dem Gewinn und dem Senden der Nachricht."
+      },
+      "message": {
+        "name": "Nachricht",
+        "description": "Die Nachricht die gesendet wird, wenn du ein Spiel gewinnst."
+      }
+    }
+  }
+}
