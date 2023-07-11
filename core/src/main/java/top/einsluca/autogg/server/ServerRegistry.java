@@ -12,6 +12,7 @@ public class ServerRegistry {
         this.servers.add(new NeruxVaceConfiguration());
         this.servers.add(new CafeStubeConfiguration());
         this.servers.add(new CytooxienConfiguration());
+        this.servers.add(new AntiACConfiguration());
     }
 
     public List<ServerConfiguration> getServers() {
