@@ -23,6 +23,11 @@ public class ChatListener {
         this.addon.getServerRegistry().getServers().forEach(serverConfiguration -> {
             serverConfiguration.getServerAddress().forEach(serverAddress -> {
                 if (Laby.labyAPI().serverController().getCurrentServerData().address().getHost().equals(serverAddress)) {
+                    for (String s : serverConfiguration.getFilter()) {
+                        if (message.contains(s)) {
+                            return;
+                        }
+                    }
                     serverConfiguration.getFormat().forEach(format -> {
                         if (message.contains(format)) {
                             this.addon.sendGG();

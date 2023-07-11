@@ -8,4 +8,6 @@ public interface ServerConfiguration {
 
     List<String> getFormat();
 
+    List<String> getFilter();
+
 }

@@ -13,4 +13,9 @@ public class GommeHDConfiguration implements ServerConfiguration {
     public List<String> getFormat() {
         return List.of("-= Statistiken dieser Runde =-", "-= Statistics of this game =-", "hat die PartyGames gewonnen!");
     }
+
+    @Override
+    public List<String> getFilter() {
+        return List.of(":");
+    }
 }
