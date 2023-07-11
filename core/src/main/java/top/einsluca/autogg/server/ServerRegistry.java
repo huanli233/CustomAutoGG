@@ -13,6 +13,7 @@ public class ServerRegistry {
         this.servers.add(new CafeStubeConfiguration());
         this.servers.add(new CytooxienConfiguration());
         this.servers.add(new AntiACConfiguration());
+        this.servers.add(new MCCIslandConfiguration());
     }
 
     public List<ServerConfiguration> getServers() {

@@ -2,19 +2,19 @@ package top.einsluca.autogg.server;
 
 import java.util.List;
 
-public class CytooxienConfiguration implements ServerConfiguration {
+public class MCCIslandConfiguration implements ServerConfiguration {
     @Override
     public List<String> getServerAddress() {
-        return List.of("cytooxien.de", "cytooxien.net");
+        return List.of("mccisland.net", "play.mccisland.net");
     }
 
     @Override
     public List<String> getFormat() {
-        return List.of("Statistiken dieser Runde:", "Statistics of the game:");
+        return List.of("Game Over!");
     }
 
     @Override
     public List<String> getFilter() {
-        return List.of("-");
+        return List.of(":");
     }
 }
