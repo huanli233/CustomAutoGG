@@ -2,8 +2,7 @@ name: Bug Report (Only for servers which are officially supported)
 description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
-assignees:
-  - EinsLucaaa
+
 body:
   - type: markdown
     attributes:
@@ -19,6 +18,14 @@ body:
         - A game mode on a server is not detected
     validations:
       required: true
+  - type: input
+    id: server
+    attributes:
+      label: Server address
+      description: The server on which the problem occurs
+      placeholder: ex. mccisland.net
+    validations:
+      required: false
   - type: textarea
     id: what-happened
     attributes:
