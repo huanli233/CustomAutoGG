@@ -6,6 +6,7 @@ import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.client.Minecraft;
 import net.labymod.api.models.addon.annotation.AddonMain;
 import top.einsluca.autogg.listener.ChatListener;
+import top.einsluca.autogg.listener.NetworkPayloadListener;
 import top.einsluca.autogg.server.ServerRegistry;
 
 import java.util.Timer;
@@ -21,6 +22,7 @@ public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
         this.registerSettingCategory();
 
         this.registerListener(new ChatListener(this));
+        this.registerListener(new NetworkPayloadListener(this));
 
 
     }

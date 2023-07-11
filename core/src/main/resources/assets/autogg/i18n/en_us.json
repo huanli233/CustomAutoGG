@@ -5,6 +5,9 @@
       "enabled": {
         "name": "Enabled"
       },
+      "custom": {
+        "name": "Server-Protocol"
+      },
       "delay": {
         "name": "Delay",
         "description": "The delay between the game ending and the message being sent."

@@ -12,6 +12,9 @@ public class AutoGGConfiguration extends AddonConfig {
     @SwitchWidget.SwitchSetting
     private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
 
+    @SwitchWidget.SwitchSetting
+    private final ConfigProperty<Boolean> custom = new ConfigProperty<>(true);
+
     @TextFieldWidget.TextFieldSetting
     public final ConfigProperty<String> message = new ConfigProperty<>("gg");
 
@@ -23,4 +26,7 @@ public class AutoGGConfiguration extends AddonConfig {
         return this.enabled;
     }
 
+    public ConfigProperty<Boolean> getCustom() {
+        return custom;
+    }
 }

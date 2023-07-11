@@ -5,6 +5,9 @@
       "enabled": {
         "name": "Aktiviert"
       },
+      "custom": {
+        "name": "Server-Protokoll"
+      },
       "delay": {
         "name": "Verzögerung",
         "description": "Die Verzögerung zwischen dem Gewinn und dem Senden der Nachricht."
