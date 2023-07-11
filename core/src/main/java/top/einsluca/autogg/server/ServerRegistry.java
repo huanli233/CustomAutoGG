@@ -9,6 +9,7 @@ public class ServerRegistry {
 
     public ServerRegistry() {
         this.servers.add(new GommeHDConfiguration());
+        this.servers.add(new NeruxVaceConfiguration());
     }
 
     public List<ServerConfiguration> getServers() {
