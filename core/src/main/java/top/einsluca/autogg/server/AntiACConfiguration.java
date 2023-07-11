@@ -10,7 +10,7 @@ public class AntiACConfiguration implements ServerConfiguration {
 
     @Override
     public List<String> getFormat() {
-        return List.of("Overview of the round");
+        return List.of("Overview of the round", "Rundenübersicht");
     }
 
     @Override

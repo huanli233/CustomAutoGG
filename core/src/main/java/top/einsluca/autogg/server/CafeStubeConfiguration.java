@@ -15,6 +15,6 @@ public class CafeStubeConfiguration implements ServerConfiguration {
 
     @Override
     public List<String> getFilter() {
-        return List.of("|", "●", "◗");
+        return List.of("●");
     }
 }
