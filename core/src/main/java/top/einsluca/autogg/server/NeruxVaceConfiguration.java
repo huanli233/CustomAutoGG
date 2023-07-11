@@ -5,7 +5,7 @@ import java.util.List;
 public class NeruxVaceConfiguration implements ServerConfiguration {
     @Override
     public List<String> getServerAddress() {
-        return List.of("neruxvace.de", "neruxvace.net", "nerux.net", "thevace.net", "neruxvase.net");
+        return List.of("neruxvace.de", "neruxvace.net", "nerux.net", "thevace.net", "neruxvase.net", "neruxvase.de");
     }
 
     @Override
@@ -15,6 +15,6 @@ public class NeruxVaceConfiguration implements ServerConfiguration {
 
     @Override
     public List<String> getFilter() {
-        return List.of("MVP", "VIP", "PLAYER", "MVP+");
+        return List.of("MVP", "VIP", "PLAYER", "MVP+", ":");
     }
 }
