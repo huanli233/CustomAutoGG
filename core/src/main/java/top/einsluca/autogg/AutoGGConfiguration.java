@@ -1,11 +1,16 @@
 package top.einsluca.autogg;
 
+import net.labymod.api.Laby;
 import net.labymod.api.addon.AddonConfig;
+import net.labymod.api.client.gui.screen.widget.widgets.input.ButtonWidget;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SliderWidget;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget;
 import net.labymod.api.client.gui.screen.widget.widgets.input.TextFieldWidget;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
+import net.labymod.api.configuration.loader.annotation.SpriteSlot;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
+import net.labymod.api.configuration.settings.annotation.SettingSection;
+import net.labymod.api.util.MethodOrder;
 
 @ConfigName("settings")
 public class AutoGGConfiguration extends AddonConfig {
@@ -20,6 +25,13 @@ public class AutoGGConfiguration extends AddonConfig {
 
     @SliderWidget.SliderSetting(min = 1, max = 10, steps = 1)
     public final ConfigProperty<Integer> delay = new ConfigProperty<>(1);
+
+    @SettingSection("help")
+    @ButtonWidget.ButtonSetting
+    @MethodOrder(after = "delay")
+    public void openServerList() {
+        Laby.labyAPI().minecraft().chatExecutor().openUrl("https://github.com/EinsLucaaa/AutoGG/wiki/Supported-server");
+    }
 
     @Override
     public ConfigProperty<Boolean> enabled() {

@@ -25,7 +25,7 @@ public class NetworkPayloadListener {
             String messageKey = reader.readString();
             String messageContent = reader.readString();
 
-            if (messageKey.equals("autogg") && JsonParser.parseString(messageContent).getAsJsonObject().has("trigger")) {
+            if (messageKey.equals("autogg")) {
                 addon.sendGG();
             }
 

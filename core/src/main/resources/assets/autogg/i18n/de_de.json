@@ -15,6 +15,15 @@
       "message": {
         "name": "Nachricht",
         "description": "Die Nachricht die gesendet wird, wenn du ein Spiel gewinnst."
+      },
+      "openServerList": {
+        "name": "Unterstützte Server",
+        "text": "Öffnen"
+      },
+      "header": {
+        "help": {
+          "name": "Hilfe"
+        }
       }
     }
   }

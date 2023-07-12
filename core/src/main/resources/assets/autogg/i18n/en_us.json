@@ -15,6 +15,15 @@
       "message": {
         "name": "Message",
         "description": "The message to send when the game ends."
+      },
+      "openServerList": {
+        "name": "Supported server",
+        "text": "Open"
+      },
+      "header": {
+        "help": {
+          "name": "Help"
+        }
       }
     }
   }
