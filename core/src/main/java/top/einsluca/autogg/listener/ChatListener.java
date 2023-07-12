@@ -27,11 +27,6 @@ public class ChatListener {
         this.addon.getServerRegistry().getServers().forEach(serverConfiguration -> {
             serverConfiguration.getServerAddress().forEach(serverAddress -> {
 
-
-                if (Laby.labyAPI().serverController().getCurrentServerData().address().getHost().contains("hypixel.net") && !this.addon.configuration().getHypixel().getOrDefault(true)) {
-                    return;
-                }
-
                 if (Laby.labyAPI().serverController().getCurrentServerData().address().getHost().contains(serverAddress)) {
                     for (String s : serverConfiguration.getFilter()) {
                         if (message.contains(s)) {

@@ -16,7 +16,6 @@ public class ServerRegistry {
         this.servers.add(new MCCIslandConfiguration());
         this.servers.add(new MyPvPConfiguration());
         this.servers.add(new StayMCConfiguration());
-        this.servers.add(new HypixelConfiguration());
     }
 
     public List<ServerConfiguration> getServers() {
