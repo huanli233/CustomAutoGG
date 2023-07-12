@@ -17,10 +17,6 @@
         "name": "Standard-Server",
         "description": "Schalte ein oder aus, ob Standardserver genutzt werden sollen, eine Liste findest du weiter unten."
       },
-      "hypixel": {
-        "name": "Hypixel",
-        "description": "Schalte Hypixel Support ein oder aus."
-      },
       "message": {
         "name": "Nachricht",
         "description": "Die Nachricht die gesendet wird, wenn du ein Spiel gewinnst."

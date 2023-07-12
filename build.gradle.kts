@@ -15,7 +15,7 @@ labyMod {
         namespace = "autogg"
         displayName = "AutoGG"
         author = "EinsLuca"
-        description = "This addon ensures that you automatically write GG into the chat after a round."
+        description = "Make yourself more likeable by automatically writing a GG in the chat after each round."
         minecraftVersion = "*"
         version = System.getenv().getOrDefault("VERSION", "1.0.0")
     }

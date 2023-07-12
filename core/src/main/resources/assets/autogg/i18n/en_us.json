@@ -17,10 +17,6 @@
         "name": "Default servers",
         "description": "Toggle on or off whether to use default servers, you can find a list below."
       },
-      "hypixel": {
-        "name": "Hypixel",
-        "description": "Switch Hypixel Support on or off."
-      },
       "message": {
         "name": "Message",
         "description": "The message to send when the game ends."
