@@ -11,7 +11,7 @@ public class MyPvPConfiguration implements ServerConfiguration {
 
     @Override
     public List<String> getFormat() {
-        return List.of("Deine Spiel-Statistiken", "Your game statistics");
+        return List.of("Deine Spiel-Statistiken", "Your game statistics", "Hat das Spiel gewonnen!");
     }
 
     @Override

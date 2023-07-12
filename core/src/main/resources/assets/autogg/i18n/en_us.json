@@ -6,11 +6,20 @@
         "name": "Enabled"
       },
       "custom": {
-        "name": "Server-Protocol"
+        "name": "Server-Protocol",
+        "description": "Server protocol means that third-party servers can make you write the GG message."
       },
       "delay": {
         "name": "Delay",
         "description": "The delay between the game ending and the message being sent."
+      },
+      "defaults": {
+        "name": "Default servers",
+        "description": "Toggle on or off whether to use default servers, you can find a list below."
+      },
+      "hypixel": {
+        "name": "Hypixel",
+        "description": "Switch Hypixel Support on or off."
       },
       "message": {
         "name": "Message",

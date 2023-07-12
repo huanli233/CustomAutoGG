@@ -20,6 +20,12 @@ public class AutoGGConfiguration extends AddonConfig {
     @SwitchWidget.SwitchSetting
     private final ConfigProperty<Boolean> custom = new ConfigProperty<>(true);
 
+    @SwitchWidget.SwitchSetting
+    private final ConfigProperty<Boolean> defaults = new ConfigProperty<>(true);
+
+    @SwitchWidget.SwitchSetting
+    private final ConfigProperty<Boolean> hypixel = new ConfigProperty<>(false);
+
     @TextFieldWidget.TextFieldSetting
     public final ConfigProperty<String> message = new ConfigProperty<>("gg");
 
@@ -40,5 +46,13 @@ public class AutoGGConfiguration extends AddonConfig {
 
     public ConfigProperty<Boolean> getCustom() {
         return custom;
+    }
+
+    public ConfigProperty<Boolean> getDefaults() {
+        return defaults;
+    }
+
+    public ConfigProperty<Boolean> getHypixel() {
+        return hypixel;
     }
 }

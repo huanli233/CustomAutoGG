@@ -2,19 +2,19 @@ package top.einsluca.autogg.server;
 
 import java.util.List;
 
-public class CafeStubeConfiguration implements ServerConfiguration {
+public class HypixelConfiguration implements ServerConfiguration {
     @Override
     public List<String> getServerAddress() {
-        return List.of("cafestu.be", "cafestube.eu");
+        return List.of("hypixel.net");
     }
 
     @Override
     public List<String> getFormat() {
-        return List.of("has won the game!", "hat das Spiel gewonnen!");
+        return List.of("Game over!", "won the game!", "They captured all wools!", "YOUR STATISTICS");
     }
 
     @Override
     public List<String> getFilter() {
-        return List.of("●");
+        return List.of(":");
     }
 }
