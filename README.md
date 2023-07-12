@@ -2,6 +2,10 @@
 
 This project is a Minecraft LabyMod addon that automatically sends "gg" (good game) messages into the chat after a game round. It enhances the gaming experience by saving time and effort in manually typing the message.
 
+If a certain language or game mode does not work on a server that is officially supported by us, please create an [Issue](https://github.com/EinsLucaaa/AutoGG/issues/new?assignees=&labels=bug%2Ctriage&projects=&template=bug-officially.yml&title=%5BBug%5D%3A+).
+
+If you think we should add another server, please also create an issue.
+
 For more information take a bitter look at the [Wiki](https://github.com/EinsLucaaa/AutoGG/wiki)
 
 ## Features
