@@ -6,7 +6,7 @@ public class MyPvPConfiguration implements ServerConfiguration {
 
     @Override
     public List<String> getServerAddress() {
-        return List.of("mypvp.me", "play.mypvp.me");
+        return List.of("mypvp.me", "play.mypvp.me", "mypvp.eu", "mypvp.net", "mypvp.cloud", "besterserver.de", "minecraft.ms", "minekube.eu", "server.gratis", "userserver.net");
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.util.List;
 public class AntiACConfiguration implements ServerConfiguration {
     @Override
     public List<String> getServerAddress() {
-        return List.of("antiac.net");
+        return List.of("antiac.net", "antiac.eu", "antiac.de", "antiac.us", "play.antiac.net", "play.antiac.us");
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.util.List;
 public class SkyDinseConfiguration implements ServerConfiguration {
     @Override
     public List<String> getServerAddress() {
-        return List.of("skydinse.de", "play.skindinse.de");
+        return List.of("skydinse.de", "play.skindinse.de", "skydinse.tk", "skydinse.net");
     }
 
     @Override
