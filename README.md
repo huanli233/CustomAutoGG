@@ -20,7 +20,6 @@ For more information take a bitter look at the [Wiki](https://github.com/EinsLuc
 
 ## Installation
 
-todo
 
 ## Usage
 
