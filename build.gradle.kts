@@ -12,7 +12,7 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 labyMod {
     defaultPackageName = "top.einsluca.autogg" //change this to your main package name (used by all modules)
     addonInfo {
-        namespace = "autogg"
+        namespace = "auto-gg"
         displayName = "AutoGG"
         author = "EinsLuca"
         description = "Make yourself more likeable by automatically writing a GG in the chat after each round."
