@@ -1,12 +1,9 @@
 package top.einsluca.autogg;
 
 import net.labymod.api.Laby;
-import net.labymod.api.LabyAPI;
 import net.labymod.api.addon.LabyAddon;
-import net.labymod.api.client.Minecraft;
 import net.labymod.api.models.addon.annotation.AddonMain;
 import top.einsluca.autogg.listener.ChatListener;
-import top.einsluca.autogg.listener.NetworkPayloadListener;
 import top.einsluca.autogg.server.ServerRegistry;
 
 import java.util.Timer;
@@ -17,12 +14,13 @@ public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
 
     private final ServerRegistry serverRegistry = new ServerRegistry();
 
+    private boolean alreadySent = false;
+
     @Override
     protected void enable() {
         this.registerSettingCategory();
 
         this.registerListener(new ChatListener(this));
-        this.registerListener(new NetworkPayloadListener(this));
 
 
     }
@@ -31,9 +29,20 @@ public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
         new Timer("sendGG").schedule(new TimerTask() {
             @Override
             public void run() {
-                Laby.references().chatExecutor().chat(configuration().message.getOrDefault("GG"), false);
+                if (!alreadySent) {
+                    Laby.references().chatExecutor().chat(configuration().message.getOrDefault("GG"), false);
+                    alreadySent = true;
+                }
             }
-        }, 1000L*configuration().delay.getOrDefault(1));
+        }, 1000L * configuration().delay.getOrDefault(1));
+
+
+        new Timer("resetSend").schedule(new TimerTask() {
+            @Override
+            public void run() {
+                alreadySent = false;
+            }
+        }, 15000L);
     }
 
     public ServerRegistry getServerRegistry() {

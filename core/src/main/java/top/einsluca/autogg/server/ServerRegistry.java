@@ -72,6 +72,14 @@ public class ServerRegistry {
                 )
         );
 
+        this.servers.add(
+                new ServerConfigurationImpl(
+                        List.of("hypixel.net", "mc.hypixel.net"),
+                        List.of("Reward Summary", "1st Killer", "Damage Dealt"),
+                        List.of(":")
+                )
+        );
+
     }
 
     public List<ServerConfiguration> getServers() {
