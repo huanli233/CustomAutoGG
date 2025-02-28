@@ -12,17 +12,25 @@ import java.util.TimerTask;
 @AddonMain
 public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
 
+    private static AutoGGAddon instance;
+
     private final ServerRegistry serverRegistry = new ServerRegistry();
 
     private boolean alreadySent = false;
+
+    public AutoGGAddon() {
+        instance = this;
+    }
+
+    public static AutoGGAddon get() {
+        return instance;
+    }
 
     @Override
     protected void enable() {
         this.registerSettingCategory();
 
         this.registerListener(new ChatListener(this));
-
-
     }
 
     public void sendGG() {

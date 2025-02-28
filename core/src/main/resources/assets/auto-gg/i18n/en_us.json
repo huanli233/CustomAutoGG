@@ -29,6 +29,12 @@
         "help": {
           "name": "Help"
         }
+      },
+      "openCustomFilters": {
+        "name": "Custom filters"
+      },
+      "openCustomFormats": {
+        "name": "Custom formats"
       }
     }
   }

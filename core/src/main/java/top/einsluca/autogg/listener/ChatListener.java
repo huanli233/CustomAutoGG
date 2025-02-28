@@ -21,6 +21,16 @@ public class ChatListener {
         String message = event.chatMessage().getOriginalPlainText();
 
         if (!this.addon.configuration().getDefaults().get()) {
+            for (String s : this.addon.configuration().getCustomFilters()) {
+                if (message.contains(s)) {
+                    return;
+                }
+            }
+            this.addon.configuration().getCustomFormats().forEach(format -> {
+                if (message.contains(format)) {
+                    this.addon.sendGG();
+                }
+            });
             return;
         }
 
