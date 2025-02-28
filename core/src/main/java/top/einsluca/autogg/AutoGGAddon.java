@@ -16,7 +16,9 @@ public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
 
     private final ServerRegistry serverRegistry = new ServerRegistry();
 
-    private boolean alreadySent = false;
+    private boolean watingForSend = false;
+    private boolean worldChanged = false;
+    private long lastSendTime;
 
     public AutoGGAddon() {
         instance = this;
@@ -34,23 +36,32 @@ public class AutoGGAddon extends LabyAddon<AutoGGConfiguration> {
     }
 
     public void sendGG() {
+        if (watingForSend || System.currentTimeMillis() - lastSendTime <= configuration().interval.getOrDefault() ) return;
+        watingForSend = true;
+        worldChanged = false;
         new Timer("sendGG").schedule(new TimerTask() {
             @Override
             public void run() {
-                if (!alreadySent) {
+                if (!worldChanged) {
                     Laby.references().chatExecutor().chat(configuration().message.getOrDefault("GG"), false);
-                    alreadySent = true;
+                    lastSendTime = System.currentTimeMillis();
+                    watingForSend = false;
                 }
             }
-        }, 1000L * configuration().delay.getOrDefault(1));
+        }, getDelay());
+    }
 
+    private int getDelay() {
+        try {
+            return Integer.parseInt(configuration().delay.getOrDefault());
+        } catch (NumberFormatException e) {
+            configuration().delay.set(String.valueOf(1000));
+            return 1000;
+        }
+    }
 
-        new Timer("resetSend").schedule(new TimerTask() {
-            @Override
-            public void run() {
-                alreadySent = false;
-            }
-        }, 15000L);
+    public void onWorldChange() {
+        worldChanged = true;
     }
 
     public ServerRegistry getServerRegistry() {

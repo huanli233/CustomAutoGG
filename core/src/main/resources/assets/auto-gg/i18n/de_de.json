@@ -13,6 +13,9 @@
         "name": "Verzögerung",
         "description": "Die Verzögerung zwischen dem Gewinn und dem Senden der Nachricht."
       },
+      "interval": {
+        "name": "Intervall"
+      },
       "defaults": {
         "name": "Standard-Server",
         "description": "Schalte ein oder aus, ob Standardserver genutzt werden sollen, eine Liste findest du weiter unten."

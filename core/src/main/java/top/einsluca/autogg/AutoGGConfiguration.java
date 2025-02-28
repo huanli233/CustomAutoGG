@@ -28,8 +28,11 @@ public class AutoGGConfiguration extends AddonConfig {
     @TextFieldWidget.TextFieldSetting
     public final ConfigProperty<String> message = new ConfigProperty<>("gg");
 
-    @SliderWidget.SliderSetting(min = 1, max = 10, steps = 1)
-    public final ConfigProperty<Integer> delay = new ConfigProperty<>(1);
+    @TextFieldWidget.TextFieldSetting
+    public final ConfigProperty<String> delay = new ConfigProperty<>("1000");
+
+    @SliderWidget.SliderSetting(min = 1000, max = 15000, steps = 1000)
+    public final ConfigProperty<Integer> interval = new ConfigProperty<>(1000);
 
     @Exclude
     private final List<String> customFormats = new ArrayList<>();
@@ -39,7 +42,7 @@ public class AutoGGConfiguration extends AddonConfig {
 
     @SettingSection("help")
     @ButtonWidget.ButtonSetting
-    @MethodOrder(after = "delay")
+    @MethodOrder(after = "interval")
     public void openServerList() {
         Laby.labyAPI().minecraft().chatExecutor().openUrl("https://github.com/EinsLucaaa/AutoGG/wiki/Supported-server");
     }

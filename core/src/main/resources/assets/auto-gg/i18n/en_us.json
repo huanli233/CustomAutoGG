@@ -13,6 +13,9 @@
         "name": "Delay",
         "description": "The delay between the game ending and the message being sent."
       },
+      "interval": {
+        "name": "Interval"
+      },
       "defaults": {
         "name": "Default servers",
         "description": "Toggle on or off whether to use default servers, you can find a list below."

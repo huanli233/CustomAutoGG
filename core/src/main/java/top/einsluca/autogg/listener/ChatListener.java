@@ -1,8 +1,12 @@
 package top.einsluca.autogg.listener;
 
 import net.labymod.api.Laby;
+import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.chat.ChatReceiveEvent;
+import net.labymod.api.event.client.world.DimensionChangeEvent;
+import net.labymod.api.event.client.world.WorldEnterEvent;
+import net.labymod.api.event.client.world.WorldLoadEvent;
 import top.einsluca.autogg.AutoGGAddon;
 
 public class ChatListener {
@@ -54,5 +58,17 @@ public class ChatListener {
         });
 
     }
+
+    @Subscribe
+    public void onWorldChange(WorldLoadEvent event) {
+        if (event.phase() == Phase.PRE) {
+            this.addon.onWorldChange();
+        }
+    }
+
+//    @Subscribe
+//    public void onDimensionChange(DimensionChangeEvent event) {
+//        this.addon.onWorldChange();
+//    }
 
 }
